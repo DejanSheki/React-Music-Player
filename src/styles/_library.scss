@@ -4,9 +4,11 @@
     left: 0;
     width: 20rem;
     height: 100%;
-    // box-shadow: 2px 2px 50px rgb(122, 119, 119);
     border-right: 1px solid rgb(172, 171, 171);
     overflow: scroll;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    opacity: 0;
     h2 {
         padding-top: 2rem;
         text-align: center;
@@ -54,4 +56,15 @@
 
 *::-webkit-scrollbar-thumb {
     background: rgba(155, 155, 155, 0.5);
+}
+
+.selected {
+    background: rgb(246, 233, 233);
+    -webkit-box-shadow: inset 0px 0px 6px 1px rgb(122, 119, 119);
+    box-shadow: inset 0px 0px 6px 1px rgb(122, 119, 119);
+}
+
+.active-library {
+    transform: translateX(0%);
+    opacity: 1;
 }
